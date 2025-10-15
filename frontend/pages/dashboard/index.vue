@@ -1,22 +1,15 @@
 <template>
-    <page-home
-        slug="dashboard"
-        @initialize="initialize"
-    >
-        <template v-slot:default="{ theme }">
-            {{ theme }}
-        </template>
-    </page-home>
+	<page-home slug="dashboard">
+		<template v-slot:default="{ theme }">
+			{{ theme }}
+		</template>
+	</page-home>
 </template>
 
 <script>
-export default {
-    name: "studyassign-dashboard",
-    
-    methods: {
-        initialize(response) {
-            console.log(response);
-        }
-    }
-}
+	export default {
+		name: "studyassign-dashboard",
+
+		methods: {},
+	};
 </script>

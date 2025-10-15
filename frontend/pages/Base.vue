@@ -1,11 +1,9 @@
 <template>
-    <page-base
-        slug="studyassign"
-    ></page-base>
+	<page-base slug="studyassign"></page-base>
 </template>
 
 <script>
-export default {
-    name: "studyassign-base",
-};
+	export default {
+		name: "studyassign-base",
+	};
 </script>
