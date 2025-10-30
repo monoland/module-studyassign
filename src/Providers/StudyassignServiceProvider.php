@@ -29,8 +29,8 @@ class StudyassignServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(
             module_path(
-                $this->moduleNamespace, 
-                $this->moduleName, 
+                $this->moduleNamespace,
+                $this->moduleName,
                 'resources' . DIRECTORY_SEPARATOR . 'views'
             ),
             $this->moduleName
