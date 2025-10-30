@@ -40,7 +40,7 @@ class StudyassignSubmission extends Model
      *
      * @var array
      */
-    protected $roles = ['studyassign-submission'];
+    protected $roles = ['studysign-submission'];
 
     /**
      * The attributes that should be cast to native types.

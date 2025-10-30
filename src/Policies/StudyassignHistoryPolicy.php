@@ -33,7 +33,7 @@ class StudyassignHistoryPolicy
     public function show(User $user, StudyassignHistory $studyassignHistory)
     {
         return $user->hasAnyPermission(
-            'show-studyassign-history'
+            'show-studysign-history'
         );
     }
 
@@ -46,7 +46,7 @@ class StudyassignHistoryPolicy
     public function view(User $user)
     {
         return $user->hasAnyPermission(
-            'view-studyassign-history'
+            'view-studysign-history'
         );
     }
 
@@ -59,7 +59,7 @@ class StudyassignHistoryPolicy
     public function create(User $user)
     {
         return $user->hasAnyPermission(
-            'create-studyassign-history'
+            'create-studysign-history'
         );
     }
 
@@ -73,7 +73,7 @@ class StudyassignHistoryPolicy
     public function update(User $user, StudyassignHistory $studyassignHistory)
     {
         return $user->hasAnyPermission(
-            'update-studyassign-history'
+            'update-studysign-history'
         );
     }
 
@@ -87,7 +87,7 @@ class StudyassignHistoryPolicy
     public function delete(User $user, StudyassignHistory $studyassignHistory)
     {
         return $user->hasAnyPermission(
-            'delete-studyassign-history'
+            'delete-studysign-history'
         );
     }
 
@@ -101,7 +101,7 @@ class StudyassignHistoryPolicy
     public function restore(User $user, StudyassignHistory $studyassignHistory)
     {
         return $user->hasAnyPermission(
-            'restore-studyassign-history'
+            'restore-studysign-history'
         );
     }
 
@@ -115,7 +115,7 @@ class StudyassignHistoryPolicy
     public function destroy(User $user, StudyassignHistory $studyassignHistory)
     {
         return $user->hasAnyPermission(
-            'destroy-studyassign-history'
+            'destroy-studysign-history'
         );
     }
 }

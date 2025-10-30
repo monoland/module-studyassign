@@ -40,7 +40,7 @@ class StudyassignHistory extends Model
      *
      * @var array
      */
-    protected $roles = ['studyassign-history'];
+    protected $roles = ['studysign-history'];
 
     /**
      * The attributes that should be cast to native types.

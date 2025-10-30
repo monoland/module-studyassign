@@ -33,7 +33,7 @@ class StudyassignSubmissionPolicy
     public function show(User $user, StudyassignSubmission $studyassignSubmission)
     {
         return $user->hasAnyPermission(
-            'show-studyassign-submission'
+            'show-studysign-submission'
         );
     }
 
@@ -46,7 +46,7 @@ class StudyassignSubmissionPolicy
     public function view(User $user)
     {
         return $user->hasAnyPermission(
-            'view-studyassign-submission'
+            'view-studysign-submission'
         );
     }
 
@@ -59,7 +59,7 @@ class StudyassignSubmissionPolicy
     public function create(User $user)
     {
         return $user->hasAnyPermission(
-            'create-studyassign-submission'
+            'create-studysign-submission'
         );
     }
 
@@ -73,7 +73,7 @@ class StudyassignSubmissionPolicy
     public function update(User $user, StudyassignSubmission $studyassignSubmission)
     {
         return $user->hasAnyPermission(
-            'update-studyassign-submission'
+            'update-studysign-submission'
         );
     }
 
@@ -87,7 +87,7 @@ class StudyassignSubmissionPolicy
     public function delete(User $user, StudyassignSubmission $studyassignSubmission)
     {
         return $user->hasAnyPermission(
-            'delete-studyassign-submission'
+            'delete-studysign-submission'
         );
     }
 
@@ -101,7 +101,7 @@ class StudyassignSubmissionPolicy
     public function restore(User $user, StudyassignSubmission $studyassignSubmission)
     {
         return $user->hasAnyPermission(
-            'restore-studyassign-submission'
+            'restore-studysign-submission'
         );
     }
 
@@ -115,7 +115,7 @@ class StudyassignSubmissionPolicy
     public function destroy(User $user, StudyassignSubmission $studyassignSubmission)
     {
         return $user->hasAnyPermission(
-            'destroy-studyassign-submission'
+            'destroy-studysign-submission'
         );
     }
 }
