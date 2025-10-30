@@ -1,5 +1,5 @@
 <template>
-	<page-home slug="dashboard">
+	<page-home page-name="studysign-dashboard">
 		<template v-slot:default="{ theme }">
 			{{ theme }}
 		</template>
@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		name: "studyassign-dashboard",
+		name: "studysign-dashboard",
 
 		methods: {},
 	};

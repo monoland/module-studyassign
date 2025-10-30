@@ -1,17 +1,17 @@
 const route = {
-	path: "/studyassign",
+	path: "/studysign",
 	meta: { requiredAuth: true },
-	component: () => import(/* webpackChunkName: "studyassign" */ "@modules/module-studyassign/frontend/pages/Base.vue"),
+	component: () => import(/* webpackChunkName: "studysign" */ "@modules/module-studyassign/frontend/pages/Base.vue"),
 	children: [
 		{
 			path: "",
-			redirect: { name: "studyassign-dashboard" },
+			redirect: { name: "studysign-dashboard" },
 		},
 
 		{
 			path: "dashboard",
-			name: "studyassign-dashboard",
-			component: () => import(/* webpackChunkName: "studyassign" */ "@modules/module-studyassign/frontend/pages/dashboard/index.vue"),
+			name: "studysign-dashboard",
+			component: () => import(/* webpackChunkName: "studysign" */ "@modules/module-studyassign/frontend/pages/dashboard/index.vue"),
 		},
 	],
 };
