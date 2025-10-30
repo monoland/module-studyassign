@@ -62,7 +62,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-            ->prefix($this->moduleName)
+            ->prefix('studysign')
             ->namespace($this->moduleControllers)
             ->group(module_path(
                 $this->moduleNamespace,
@@ -80,7 +80,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
-        Route::prefix($this->moduleName . '/api')
+        Route::prefix('studysign/api')
             ->middleware(['api', 'auth:sanctum'])
             ->namespace($this->moduleControllers)
             ->group(module_path(
