@@ -8,13 +8,24 @@ use App\Http\Controllers\Controller;
 class DashboardController extends Controller
 {
     /**
-     * Undocumented function
+     * index function
      *
      * @param Request $request
      * @return void
      */
     public function index(Request $request)
     {
-        // 
+        //
+    }
+
+    /**
+     * report function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function report(Request $request)
+    {
+        //
     }
 }

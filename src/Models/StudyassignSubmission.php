@@ -2,24 +2,24 @@
 
 namespace Module\Studyassign\Models;
 
-use App\Traits\Filterable;
-use App\Traits\HasCollectionSetup;
-use App\Traits\HasFeatures;
 use App\Traits\HasMeta;
+use App\Traits\Filterable;
 use App\Traits\Searchable;
+use App\Traits\HasFeatures;
+use Illuminate\Http\Request;
+use App\Traits\HasCollectionSetup;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class StudyassignSubmission extends Model
 {
-    use Filterable,
-        HasMeta,
-        HasFeatures,
-        HasCollectionSetup,
-        Searchable,
-        SoftDeletes;
+    use Filterable;
+    use HasMeta;
+    use HasFeatures;
+    use HasCollectionSetup;
+    use Searchable;
+    use SoftDeletes;
 
     /**
      * The connection name for the model.
@@ -66,8 +66,8 @@ class StudyassignSubmission extends Model
      */
     public static function storeRecord(Request $request)
     {
-        $model = new static;
-        
+        $model = new static();
+
         DB::connection($model->connection)->beginTransaction();
 
         try {

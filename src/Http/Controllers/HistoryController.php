@@ -2,11 +2,11 @@
 
 namespace Module\Studyassign\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Module\Studyassign\Models\StudyassignHistory;
 use Module\Studyassign\Http\Resources\HistoryCollection;
 use Module\Studyassign\Http\Resources\HistoryShowResource;
-use Module\Studyassign\Models\StudyassignHistory;
 
 class HistoryController extends Controller
 {
