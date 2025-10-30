@@ -11,6 +11,8 @@ use App\Traits\HasCollectionSetup;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Module\Reference\Models\ReferenceEducationLevel;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class StudyassignSubmission extends Model
 {
@@ -57,6 +59,97 @@ class StudyassignSubmission extends Model
      * @var string
      */
     protected $defaultOrder = 'name';
+
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return array
+     */
+    public static function pageCombos(Request $request): array
+    {
+        return [
+            'edulevels' => ReferenceEducationLevel::forCombo()
+        ];
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return array
+     */
+    public static function pageHeaders(Request $request): array
+    {
+        return [
+            ['text' => 'NIP', 'value' => 'biodata_id'],
+            ['text' => 'Name', 'value' => 'name'],
+            ['text' => 'Tingkat', 'value' => 'target_edulevel_name'],
+            ['text' => 'Perguruan Tinggi', 'value' => 'college_name'],
+            ['text' => 'Prodi', 'value' => 'study_program'],
+            ['text' => 'Status', 'value' => 'status', 'class' => 'field-datetime'],
+        ];
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return array
+     */
+    public static function pageResourceMap(Request $request, $model): array
+    {
+        return [
+            'id' => $model->id,
+            'name' => $model->name,
+            'biodata_id' => $model->biodata_id,
+            'target_edulevel_name' => $model->edulevel?->name,
+            'college_name' => $model->college_name,
+            'study_program' => $model->study_program,
+            'status' => $model->recommend_status,
+        ];
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return array
+     */
+    public static function pageShowResourceMap(Request $request, $model): array
+    {
+        return [
+            'id' => $model->id,
+            'name' => $model->name,
+            'biodata_id' => $model->biodata_id,
+            'section_id' => $model->section_id,
+            'section_name' => $model->section_name,
+            'education_level_id' => $model->education_level_id,
+            'education_level_name' => $model->education_level_name,
+            'positionable_type' => $model->positionable_type,
+            'positionable_id' => $model->positionable_id,
+            'position_name' => $model->position_name,
+            'structural_id' => $model->structural_id,
+            'structural_name' => $model->structural_name,
+            'workunit_id' => $model->workunit_id,
+            'workunit_name' => $model->workunit_name,
+            'target_edulevel_id' => $model->target_edulevel_id,
+            'target_edulevel_name' => $model->edulevel?->name,
+            'college_name' => $model->college_name,
+            'study_program' => $model->study_program,
+            'status' => $model->recommend_status,
+        ];
+    }
+
+    /**
+     * edulevel function
+     *
+     * @return BelongsTo
+     */
+    public function edulevel(): BelongsTo
+    {
+        return $this->belongsTo(ReferenceEducationLevel::class, 'target_edulevel_id');
+    }
 
     /**
      * The model store method
