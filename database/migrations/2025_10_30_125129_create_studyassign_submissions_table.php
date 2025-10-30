@@ -39,6 +39,9 @@ return new class () extends Migration {
             $table->string('recommend_permission_path')->nullable();
             $table->boolean('recommend_permission_status')->index()->default(false);
 
+            /**
+             * DRAFTED | SUBMITTED | PERMITTED | VALIDATED | REJECTED | REPAIRED | COMPLETED
+             */
             $table->string('recommend_status')->index();
             $table->boolean('recommend_linear')->index()->default(false);
             $table->jsonb('recommend_files')->nullable();
