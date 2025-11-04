@@ -13,6 +13,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Module\Reference\Models\ReferenceEducationLevel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Module\Governance\Models\GovernanceWorkunit;
+use Module\Reference\Models\ReferenceSection;
 
 class StudyassignSubmission extends Model
 {
@@ -50,7 +53,8 @@ class StudyassignSubmission extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'meta' => 'array'
+        'meta' => 'array',
+        'recommend_permission_date' => 'date:Y-m-d'
     ];
 
     /**
@@ -111,7 +115,7 @@ class StudyassignSubmission extends Model
     }
 
     /**
-     * Undocumented function
+     * pageShowResourceMap function
      *
      * @param Request $request
      * @return array
@@ -142,6 +146,16 @@ class StudyassignSubmission extends Model
     }
 
     /**
+     * section function
+     *
+     * @return BelongsTo
+     */
+    public function section(): BelongsTo
+    {
+        return $this->belongsTo(ReferenceSection::class, 'section_id');
+    }
+
+    /**
      * edulevel function
      *
      * @return BelongsTo
@@ -149,6 +163,26 @@ class StudyassignSubmission extends Model
     public function edulevel(): BelongsTo
     {
         return $this->belongsTo(ReferenceEducationLevel::class, 'target_edulevel_id');
+    }
+
+    /**
+     * workunit function
+     *
+     * @return BelongsTo
+     */
+    public function workunit(): BelongsTo
+    {
+        return $this->belongsTo(GovernanceWorkunit::class, 'workunit_id');
+    }
+
+    /**
+     * positionable function
+     *
+     * @return MorphTo
+     */
+    public function positionable(): MorphTo
+    {
+        return $this->morphTo('positionable');
     }
 
     /**

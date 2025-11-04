@@ -1,13 +1,13 @@
 <table>
     <tr>
-        <td colspan="3">REKOMENDASI MELANJUTKAN PENDIDIKAN</td>
+        <td colspan="4">REKOMENDASI MELANJUTKAN PENDIDIKAN</td>
     </tr>    
     <tr>
-        <td colspan="3">Nomor : {{ $recommend_letter_number }}</td>
+        <td colspan="4" style="text-align: center;">Nomor: T-800.1.4.1/{{ $recommend_permission_number }}/SRMP/SINGKATAN/TAHUN</td>
     </tr>
     
     <tr>
-        <td colspan="3">&nbsp;</td>
+        <td colspan="4">&nbsp;</td>
     </tr>
 
     <tr>
@@ -25,7 +25,7 @@
     </tr>
 
     <tr>
-        <td colspan="3">Kepala Badan Kepegawaian Daerah memberikan rekomendasi kepada :</td>
+        <td colspan="4">Kepala Badan Kepegawaian Daerah memberikan rekomendasi kepada :</td>
     </tr>
 
     <tr>
@@ -71,14 +71,14 @@
     </tr>
 
     <tr>
-        <td colspan="3">
+        <td colspan="4">
             Untuk melanjutkan pendidikan jenjang {{ $target_edulevel_name }} pada perguruan tinggi {{ $college_name }} program studi {{ $study_program }} dengan tidak menganggu tugas kedinasan.<br/>
             Demikian rekomendasi ini dibuat untuk dipergunakan seperlunya.
         </td>
     </tr>
 
     <tr>
-        <td colspan="3">&nbsp;</td>
+        <td colspan="4">&nbsp;</td>
     </tr>
 
     <tr>

@@ -1,15 +1,34 @@
-<table>
+@include('studyassign::reports.css')
+
+<table width="100%" style="border-collapse: collapse;">
+  <tr>
+    <td width="100" style="text-align: center;">
+      <img src="{{ $logo }}" alt="Logo Banten" width="90">
+    </td>
+    <td style="text-align: center; line-height: 1.3;">
+      <div style="font-weight: bold; font-size: 16px;">PEMERINTAH PROVINSI BANTEN</div>
+      <div style="font-weight: bold; font-size: 18px;">{{ str($workunit_name)->upper()->toString() }}</div>
+      <div style="font-size: 12px; font-weight: normal;">{!! $workunit_address !!}</div>
+    </td>
+  </tr>
+</table>
+
+<!-- Garis ganda di bawah kop surat -->
+<hr style="border: 2px solid black; margin: 0;">
+<hr style="border: 0.5px solid black; margin-top: 1px; margin-bottom: 10px;">
+
+<table class="letter">
     <tr>
-        <td colspan="3">SURAT IZIN</td>
+        <td colspan="3" style="text-align: center;">SURAT IZIN</td>
     </tr>    
     <tr>
-        <td colspan="3">Nomor: {{ $recommend_permission_number }}</td>
+        <td colspan="3" style="text-align: center;">Nomor: T-800.1.4.1/{{ $number }}/SIMP/{{ $acronim }}/{{ $year }}</td>
     </tr>
     <tr>
-        <td colspan="3">TENTANG</td>
+        <td colspan="3" style="text-align: center;">TENTANG</td>
     </tr>
     <tr>
-        <td colspan="3">IZIN MELANJUTKAN PENDIDIKAN</td>
+        <td colspan="3" style="text-align: center;">IZIN MELANJUTKAN PENDIDIKAN</td>
     </tr>
 
     <tr>
@@ -17,13 +36,17 @@
     </tr>
 
     <tr>
-        <td>Dasar</td>
-        <td>:</td>
-        <td>Peraturan Gubernur Banten Nomor 32 Tahun 2020 Tentang Pengembangan Kompetensi Aparatur Sipil Negara melalui Pemberian Tugas Belajar, Izin Belajar, dan Magang/Praktek Kerja di Lingkungan Pemerintah Provinsi Banten.</td>
+        <td style="width: 40mm">Dasar</td>
+        <td style="width: 3mm">:</td>
+        <td style="text-align: justify;">Peraturan Gubernur Banten Nomor 32 Tahun 2020 Tentang Pengembangan Kompetensi Aparatur Sipil Negara melalui Pemberian Tugas Belajar, Izin Belajar, dan Magang/Praktek Kerja di Lingkungan Pemerintah Provinsi Banten.</td>
     </tr>
 
     <tr>
-        <td colspan="3">MEMBERI IZIN</td>
+        <td colspan="3">&nbsp;</td>
+    </tr>
+    
+    <tr>
+        <td colspan="3" style="text-align: center;">MEMBERI IZIN</td>
     </tr>
 
     <tr>
@@ -33,31 +56,31 @@
     <tr>
         <td>Nama</td>
         <td>:</td>
-        <td>{{ $name }}</td>
+        <td style="text-align: justify;">{{ $name }}</td>
     </tr>
 
     <tr>
         <td>NIP</td>
         <td>:</td>
-        <td>{{ $biodata_id }}</td>
+        <td style="text-align: justify;">{{ $biodata_id }}</td>
     </tr>
 
     <tr>
         <td>Jabatan</td>
         <td>:</td>
-        <td>{{ $position_name }}</td>
+        <td style="text-align: justify;">{{ $position_name }}</td>
     </tr>
 
     <tr>
         <td>Pangkat/Gol</td>
         <td>:</td>
-        <td>{{ $section_name }}</td>
+        <td style="text-align: justify;">{{ $section_name }}</td>
     </tr>
 
     <tr>
         <td>Untuk</td>
         <td>:</td>
-        <td>Melanjutkan pendidikan jenjang {{ $target_edulevel_name }} pada perguruan tinggi {{ $college_name }} program studi {{ $study_program }} dengan mempertimbangkan      bidang keilmuan yang ditempuh linear dengan kebutuhan Perangkat Daerah sesuai tupoksi, dan dalam pelaksanaan pendidikan tidak mengganggu pekerjaan/tugas dinas sehari-hari.</td>
+        <td style="text-align: justify;">Melanjutkan pendidikan jenjang {{ $target_edulevel_name }} pada perguruan tinggi {{ $college_name }} program studi {{ $study_program }} dengan mempertimbangkan      bidang keilmuan yang ditempuh linear dengan kebutuhan Perangkat Daerah sesuai tupoksi, dan dalam pelaksanaan pendidikan tidak mengganggu pekerjaan/tugas dinas sehari-hari.</td>
     </tr>
 
     <tr>
@@ -65,18 +88,24 @@
     </tr>
 
     <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
         <td>
-            Ditetapkan di Serang<br/>
-            Pada Tanggal {{ $recommend_permission_date }}<br/>
-            {{ $recommend_permission_position }}<br/>
-            <br/>
-            <br/>
-            <br/>
-            {{ $recommend_permission_officer }}<br/>
-            {{ $recommend_permission_section }}<br/>
-            NIP. {{ $recommend_permission_nip }}<br/>
+            <table>
+                <tr>
+                    <td style="width: 100%;"></td>
+                    <td style="min-width: 90mm; text-align: center;">
+                        Ditetapkan di Serang<br/>
+                        Pada Tanggal {{ $recommend_permission_date }}<br/>
+                        {{ $recommend_permission_position }}<br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        {{ $recommend_permission_officer }}<br/>
+                        {{ $recommend_permission_section }}<br/>
+                        NIP. {{ $recommend_permission_nip }}<br/>
+                    </td>
+                </tr>
+            </table>
         </td>
     </tr>
 </table>

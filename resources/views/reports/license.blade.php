@@ -1,9 +1,29 @@
+<table width="100%" style="border-collapse: collapse;">
+  <tr>
+    <td width="100" style="text-align: center;">
+      <img src="kop-bkd.png" alt="Logo Banten" width="90">
+    </td>
+    <td style="text-align: center; line-height: 1.3;">
+      <div style="font-weight: bold; font-size: 16px;">PEMERINTAH PROVINSI BANTEN</div>
+      <div style="font-weight: bold; font-size: 18px;">BADAN KEPEGAWAIAN DAERAH</div>
+      <div style="font-size: 12px; font-weight: normal;">
+        Jl. Syekh Nawawi Al-Bantani KP3B Curug - Kota Serang, Provinsi Banten<br/>
+        Telepon (0254) 267068 – Fax (0254) 267069 – Website: <em>https://bkd.bantenprov.go.id</em>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- Garis ganda di bawah kop surat -->
+<hr style="border: 2px solid black; margin: 0;">
+<hr style="border: 0.5px solid black; margin-top: 1px; margin-bottom: 10px;">
+
 <table>
     <tr>
         <td colspan="4">SURAT IZIN BELAJAR</td>
     </tr>    
     <tr>
-        <td colspan="4">Nomor : {{ $recommend_letter_number }}</td>
+        <td colspan="4" style="text-align: center;">Nomor: T-800.1.4.1/{{ $recommend_letter_number }}/SIB/SINGKATAN/TAHUN</td>
     </tr>
     
     <tr>
