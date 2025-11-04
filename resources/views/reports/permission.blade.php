@@ -92,7 +92,7 @@
         <td>
             <table>
                 <tr>
-                    <td style="width: 100%;"></td>
+                    <td style="width: 100%;">&nbsp;</td>
                     <td style="min-width: 90mm; text-align: center;">
                         Ditetapkan di Serang<br/>
                         Pada Tanggal {{ $recommend_permission_date }}<br/>

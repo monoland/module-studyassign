@@ -1,15 +1,14 @@
+@include('studyassign::reports.css')
+
 <table width="100%" style="border-collapse: collapse;">
   <tr>
     <td width="100" style="text-align: center;">
-      <img src="kop-bkd.png" alt="Logo Banten" width="90">
+      <img src="{{ $logo }}" alt="Logo Banten" width="90">
     </td>
     <td style="text-align: center; line-height: 1.3;">
       <div style="font-weight: bold; font-size: 16px;">PEMERINTAH PROVINSI BANTEN</div>
-      <div style="font-weight: bold; font-size: 18px;">BADAN KEPEGAWAIAN DAERAH</div>
-      <div style="font-size: 12px; font-weight: normal;">
-        Jl. Syekh Nawawi Al-Bantani KP3B Curug - Kota Serang, Provinsi Banten<br/>
-        Telepon (0254) 267068 – Fax (0254) 267069 – Website: <em>https://bkd.bantenprov.go.id</em>
-      </div>
+      <div style="font-weight: bold; font-size: 18px;">{{ str($workunit_name)->upper()->toString() }}</div>
+      <div style="font-size: 12px; font-weight: normal;">{!! $workunit_address !!}</div>
     </td>
   </tr>
 </table>
@@ -18,12 +17,12 @@
 <hr style="border: 2px solid black; margin: 0;">
 <hr style="border: 0.5px solid black; margin-top: 1px; margin-bottom: 10px;">
 
-<table>
+<table class="letter">
     <tr>
-        <td colspan="4">SURAT IZIN BELAJAR</td>
+        <td colspan="4" style="text-align: center;">SURAT IZIN BELAJAR</td>
     </tr>    
     <tr>
-        <td colspan="4" style="text-align: center;">Nomor: T-800.1.4.1/{{ $recommend_letter_number }}/SIB/SINGKATAN/TAHUN</td>
+        <td colspan="4" style="text-align: center;">Nomor: T-800.1.4.1/{{ $number }}/SIB/{{ $acronim }}/{{ $year }}</td>
     </tr>
     
     <tr>
@@ -31,33 +30,37 @@
     </tr>
 
     <tr>
-        <td>Menimbang</td>
-        <td>:</td>
-        <td>a.</td>
-        <td>bahwa dalam rangka meningkatkan Kompetensi Pegawai Negeri Sipil di lingkungan Pemerintah Provinsi Banten dan untuk menunjang kinerja perlu didukung dengan peningkatan jenjang pendidikan Pegawai Negeri Sipil yang bersangkutan;</td>
+        <td style="width: 25mm;">Menimbang</td>
+        <td style="width: 4mm;">:</td>
+        <td style="width: 5mm;">a.</td>
+        <td style="text-align: justify">bahwa dalam rangka meningkatkan Kompetensi Pegawai Negeri Sipil di lingkungan Pemerintah Provinsi Banten dan untuk menunjang kinerja perlu didukung dengan peningkatan jenjang pendidikan Pegawai Negeri Sipil yang bersangkutan;</td>
     </tr>
 
     <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>b.</td>
-        <td>bahwa berdasarkan pertimbangan sebagaimana dimaksud pada huruf a perlu diterbitkan Surat Izin Belajar.</td>
+        <td style="text-align: justify">bahwa berdasarkan pertimbangan sebagaimana dimaksud pada huruf a perlu diterbitkan Surat Izin Belajar.</td>
     </tr>
 
     <tr>
         <td>Mengingat</td>
         <td>:</td>
-        <td colspan="2">Peraturan Gubernur Banten Nomor 32 Tahun 2020 Tentang Pengembangan Kompetensi Aparatur Sipil Negara melalui Pemberian Tugas Belajar, Izin Belajar, dan Magang/Praktek Kerja di Lingkungan Pemerintah Provinsi Banten.</td>
+        <td colspan="2" style="text-align: justify">Peraturan Gubernur Banten Nomor 32 Tahun 2020 Tentang Pengembangan Kompetensi Aparatur Sipil Negara melalui Pemberian Tugas Belajar, Izin Belajar, dan Magang/Praktek Kerja di Lingkungan Pemerintah Provinsi Banten.</td>
     </tr>
 
     <tr>
         <td>Memperhatikan</td>
         <td>:</td>
-        <td colspan="2">Surat {{ $recommend_letter_position }} Nomor : {{ $recommend_letter_number }} Tanggal {{ $recommend_letter_date }}, dengan ini Kepala Badan Kepegawaian Daerah Provinsi Banten.</td>
+        <td colspan="2" style="text-align: justify">Surat {{ $recommend_letter_position }} Nomor : {{ $recommend_letter_number }} Tanggal {{ $recommend_letter_date }}, dengan ini Kepala Badan Kepegawaian Daerah Provinsi Banten.</td>
     </tr>
 
     <tr>
-        <td colspan="4">MENGIZINKAN</td>
+        <td colspan="4">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td colspan="4" style="text-align: center;">MENGIZINKAN</td>
     </tr>
 
     <tr>
@@ -91,7 +94,11 @@
     <tr>
         <td>Unit Kerja</td>
         <td>:</td>
-        <td colspan="2">{{ $section_name }}</td>
+        <td colspan="2">{{ $workunit_name }}</td>
+    </tr>
+
+    <tr>
+        <td colspan="4">&nbsp;</td>
     </tr>
 
     <tr>
@@ -103,7 +110,7 @@
                 <li>Biaya pendidikan ditanggung sepenuhnya oleh yang bersangkutan;</li>
                 <li>Menyampaikan laporan perkembangan studi tiap semester yang disahkan Perguruan Tinggi;</li>
                 <li>Izin belajar ini dinyatakan tidak berlaku apabila :
-                    <ol>
+                    <ol type="a">
                         <li>Dalam proses belajar mengajar yang ditempuh oleh yang bersangkutan ternyata melanggar ketentuan standar dan norma akademik berdasarkan peraturan perundang-undangan yang berlaku;</li>
                         <li>Dikemudian hari terbukti perolehan ijazah tanda kelulusannya melanggar ketentuan peraturan perundang-undangan yang berlaku.</li>
                     </ol>
@@ -122,17 +129,26 @@
     </tr>
 
     <tr>
-        <td>&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
+        <td colspan="3">&nbsp;</td>
         <td>
-            Serang, {{ $license_letter_date }}<br/>
-            Kepala Badan Kepegawaian Daerah<br/>
-            <br/>
-            <br/>
-            <br/>
-            {{ $license_letter_officer }}<br/>
-            {{ $license_letter_section }}<br/>
-            NIP. {{ $license_letter_nip }}<br/>
+            <table>
+                <tr>
+                    <td style="width: 100%;">&nbsp;</td>
+                    <td style="min-width: 90mm; text-align: center;">
+                        Serang, {{ $recommend_letter_date }}<br/>
+                        <!-- S3 -->
+                        Kepala Badan Kepegawaian Daerah<br/>
+                        <!-- S1/S2 -->
+                        Kepala Badan Kepegawaian Daerah<br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        {{ $recommend_letter_officer }}<br/>
+                        {{ $recommend_letter_section }}<br/>
+                        NIP. {{ $recommend_letter_nip }}<br/>
+                    </td>
+                </tr>
+            </table>
         </td>
     </tr>
 
@@ -141,7 +157,7 @@
     </tr>
 
     <tr>
-        <td>
+        <td colspan="4" style="font-size: 14px;">
             Tembusan:<br/>
             <ol>
                 <li>Gubernur Banten;</li>
@@ -151,6 +167,5 @@
                 <li>Rektor {{ $college_name }}</li>
             </ol>
         </td>
-        <td colspan="3">&nbsp;</td>
     </tr>
 </table>

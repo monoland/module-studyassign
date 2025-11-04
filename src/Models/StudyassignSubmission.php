@@ -11,11 +11,11 @@ use App\Traits\HasCollectionSetup;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Module\Reference\Models\ReferenceSection;
+use Module\Governance\Models\GovernanceWorkunit;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Module\Reference\Models\ReferenceEducationLevel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Module\Governance\Models\GovernanceWorkunit;
-use Module\Reference\Models\ReferenceSection;
 
 class StudyassignSubmission extends Model
 {
@@ -145,6 +145,11 @@ class StudyassignSubmission extends Model
         ];
     }
 
+    public function edulevel(): BelongsTo
+    {
+        return $this->belongsTo(ReferenceEducationLevel::class, 'education_level_id');
+    }
+
     /**
      * section function
      *
@@ -160,7 +165,7 @@ class StudyassignSubmission extends Model
      *
      * @return BelongsTo
      */
-    public function edulevel(): BelongsTo
+    public function targetEdulevel(): BelongsTo
     {
         return $this->belongsTo(ReferenceEducationLevel::class, 'target_edulevel_id');
     }
