@@ -1,82 +1,136 @@
 <table>
     <tr>
-        <td colspan="3">SURAT IZIN</td>
+        <td colspan="4">SURAT IZIN BELAJAR</td>
     </tr>    
     <tr>
-        <td colspan="3">Nomor: {{ $recommend_permission_number }}</td>
+        <td colspan="4">Nomor : {{ $recommend_letter_number }}</td>
     </tr>
+    
     <tr>
-        <td colspan="3">TENTANG</td>
-    </tr>
-    <tr>
-        <td colspan="3">IZIN MELANJUTKAN PENDIDIKAN</td>
+        <td colspan="4">&nbsp;</td>
     </tr>
 
     <tr>
-        <td colspan="3">&nbsp;</td>
-    </tr>
-
-    <tr>
-        <td>Dasar</td>
+        <td>Menimbang</td>
         <td>:</td>
-        <td>Peraturan Gubernur Banten Nomor 32 Tahun 2020 Tentang Pengembangan Kompetensi Aparatur Sipil Negara melalui Pemberian Tugas Belajar, Izin Belajar, dan Magang/Praktek Kerja di Lingkungan Pemerintah Provinsi Banten.</td>
+        <td>a.</td>
+        <td>bahwa dalam rangka meningkatkan Kompetensi Pegawai Negeri Sipil di lingkungan Pemerintah Provinsi Banten dan untuk menunjang kinerja perlu didukung dengan peningkatan jenjang pendidikan Pegawai Negeri Sipil yang bersangkutan;</td>
     </tr>
 
     <tr>
-        <td colspan="3">MEMBERI IZIN</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>b.</td>
+        <td>bahwa berdasarkan pertimbangan sebagaimana dimaksud pada huruf a perlu diterbitkan Surat Izin Belajar.</td>
     </tr>
 
     <tr>
-        <td colspan="3">Kepada</td>
+        <td>Mengingat</td>
+        <td>:</td>
+        <td colspan="2">Peraturan Gubernur Banten Nomor 32 Tahun 2020 Tentang Pengembangan Kompetensi Aparatur Sipil Negara melalui Pemberian Tugas Belajar, Izin Belajar, dan Magang/Praktek Kerja di Lingkungan Pemerintah Provinsi Banten.</td>
+    </tr>
+
+    <tr>
+        <td>Memperhatikan</td>
+        <td>:</td>
+        <td colspan="2">Surat {{ $recommend_letter_position }} Nomor : {{ $recommend_letter_number }} Tanggal {{ $recommend_letter_date }}, dengan ini Kepala Badan Kepegawaian Daerah Provinsi Banten.</td>
+    </tr>
+
+    <tr>
+        <td colspan="4">MENGIZINKAN</td>
+    </tr>
+
+    <tr>
+        <td colspan="4">Kepada:</td>
     </tr>
 
     <tr>
         <td>Nama</td>
         <td>:</td>
-        <td>{{ $name }}</td>
+        <td colspan="2">{{ $name }}</td>
     </tr>
 
     <tr>
         <td>NIP</td>
         <td>:</td>
-        <td>{{ $biodata_id }}</td>
+        <td colspan="2">{{ $biodata_id }}</td>
     </tr>
 
     <tr>
         <td>Jabatan</td>
         <td>:</td>
-        <td>{{ $position_name }}</td>
+        <td colspan="2">{{ $position_name }}</td>
     </tr>
 
     <tr>
         <td>Pangkat/Gol</td>
         <td>:</td>
-        <td>{{ $section_name }}</td>
+        <td colspan="2">{{ $section_name }}</td>
     </tr>
 
     <tr>
-        <td>Untuk</td>
+        <td>Unit Kerja</td>
         <td>:</td>
-        <td>Melanjutkan pendidikan jenjang {{ $target_edulevel_name }} pada perguruan tinggi {{ $college_name }} program studi {{ $study_program }} dengan mempertimbangkan      bidang keilmuan yang ditempuh linear dengan kebutuhan Perangkat Daerah sesuai tupoksi, dan dalam pelaksanaan pendidikan tidak mengganggu pekerjaan/tugas dinas sehari-hari.</td>
+        <td colspan="2">{{ $section_name }}</td>
     </tr>
 
     <tr>
-        <td colspan="3">&nbsp;</td>
-    </tr>
-
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>
-            Ditetapkan di Serang<br/>
-            Pada Tanggal {{ $recommend_permission_date }}<br/>
-            {{ $recommend_permission_position }}<br/>
-            <br/>
-            <br/>
-            <br/>
-            {{ $recommend_permission_officer }}<br/>
-            {{ $recommend_permission_section }}<br/>
-            NIP. {{ $recommend_permission_nip }}<br/>
+        <td colspan="4">
+            Untuk melanjutkan pendidikan jenjang {{ $target_edulevel_name }} pada perguruan tinggi {{ $college_name }} dengan ketentuan sebagai berikut:<br/>
+            <ol>
+                <li>Izin belajar ini diberikan untuk perkuliahan yang dilaksanakan di luar jam kerja;</li>
+                <li>Tidak mengganggu tugas-tugas kedinasan dan tidak akan menuntut penyesuaian ijazah;</li>
+                <li>Biaya pendidikan ditanggung sepenuhnya oleh yang bersangkutan;</li>
+                <li>Menyampaikan laporan perkembangan studi tiap semester yang disahkan Perguruan Tinggi;</li>
+                <li>Izin belajar ini dinyatakan tidak berlaku apabila :
+                    <ol>
+                        <li>Dalam proses belajar mengajar yang ditempuh oleh yang bersangkutan ternyata melanggar ketentuan standar dan norma akademik berdasarkan peraturan perundang-undangan yang berlaku;</li>
+                        <li>Dikemudian hari terbukti perolehan ijazah tanda kelulusannya melanggar ketentuan peraturan perundang-undangan yang berlaku.</li>
+                    </ol>
+                </li>
+                <li>Pelanggaran dalam cara memperoleh dan kepemilikan ijazah secara tidak sah akan dikenai sanksi menurut perundang-undangan yang berlaku.</li>
+            </ol>
         </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">Demikian surat izin belajar ini dibuat agar dipergunakan sebagaimana mestinya.</td>
+    </tr>
+
+    <tr>
+        <td colspan="4">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
+        <td>
+            Serang, {{ $license_letter_date }}<br/>
+            Kepala Badan Kepegawaian Daerah<br/>
+            <br/>
+            <br/>
+            <br/>
+            {{ $license_letter_officer }}<br/>
+            {{ $license_letter_section }}<br/>
+            NIP. {{ $license_letter_nip }}<br/>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>
+            Tembusan:<br/>
+            <ol>
+                <li>Gubernur Banten;</li>
+                <li>Wakil Gubernur Banten;</li>
+                <li>Sekretaris Daerah Provinsi Banten;</li>
+                <li>{{ $recommend_permission_position }}</li>
+                <li>Rektor {{ $college_name }}</li>
+            </ol>
+        </td>
+        <td colspan="3">&nbsp;</td>
     </tr>
 </table>

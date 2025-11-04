@@ -86,8 +86,11 @@
         <td>&nbsp;</td>
         <td>
             Serang, {{ $recommend_letter_date }}<br/>
+            <!-- S3 -->
+            Kepala Badan Kepegawaian Daerah<br/>
+            <!-- S1/S2 -->
             a.n. Kepala Badan Kepegawaian Daerah<br/>
-            a.n. Kepala Bidang Pengembangan ASN<br/>
+            Kepala Bidang Pengembangan ASN<br/>
             <br/>
             <br/>
             <br/>
