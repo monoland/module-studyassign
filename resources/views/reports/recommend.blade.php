@@ -17,9 +17,9 @@
 <hr style="border: 2px solid black; margin: 0;">
 <hr style="border: 0.5px solid black; margin-top: 1px; margin-bottom: 10px;">
 
-<table class="letter">
+<table class="letter" style="font-size: 12px;">
     <tr>
-        <td colspan="4" style="text-align: center;">REKOMENDASI MELANJUTKAN PENDIDIKAN</td>
+        <td colspan="4" style="font-size: 14px; text-align: center;">REKOMENDASI MELANJUTKAN PENDIDIKAN</td>
     </tr>    
     <tr>
         <td colspan="4" style="text-align: center;">Nomor: T-800.1.4.1/{{ $number }}/SRMP/{{ $acronim }}/{{ $year }}</td>

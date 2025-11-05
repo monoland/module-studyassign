@@ -17,18 +17,21 @@
 <hr style="border: 2px solid black; margin: 0;">
 <hr style="border: 0.5px solid black; margin-top: 1px; margin-bottom: 10px;">
 
-<table class="letter">
+<table class="letter" style="font-size: 12px;">
     <tr>
-        <td colspan="3" style="text-align: center;">SURAT IZIN</td>
+        <td colspan="3" style="font-size: 16px; text-align: center;">SURAT IZIN</td>
     </tr>    
+
     <tr>
         <td colspan="3" style="text-align: center;">Nomor: T-800.1.4.1/{{ $number }}/SIMP/{{ $acronim }}/{{ $year }}</td>
     </tr>
+
     <tr>
-        <td colspan="3" style="text-align: center;">TENTANG</td>
+        <td colspan="3" style="font-size: 14px; text-align: center;">TENTANG</td>
     </tr>
+    
     <tr>
-        <td colspan="3" style="text-align: center;">IZIN MELANJUTKAN PENDIDIKAN</td>
+        <td colspan="3" style="font-size: 14px; text-align: center;">IZIN MELANJUTKAN PENDIDIKAN</td>
     </tr>
 
     <tr>
@@ -36,7 +39,7 @@
     </tr>
 
     <tr>
-        <td style="width: 40mm">Dasar</td>
+        <td style="width: 30mm">Dasar</td>
         <td style="width: 3mm">:</td>
         <td style="text-align: justify;">Peraturan Gubernur Banten Nomor 32 Tahun 2020 Tentang Pengembangan Kompetensi Aparatur Sipil Negara melalui Pemberian Tugas Belajar, Izin Belajar, dan Magang/Praktek Kerja di Lingkungan Pemerintah Provinsi Banten.</td>
     </tr>
@@ -46,7 +49,7 @@
     </tr>
     
     <tr>
-        <td colspan="3" style="text-align: center;">MEMBERI IZIN</td>
+        <td colspan="3" style="font-size: 14px; text-align: center;">MEMBERI IZIN</td>
     </tr>
 
     <tr>
@@ -93,10 +96,13 @@
             <table>
                 <tr>
                     <td style="width: 100%;">&nbsp;</td>
-                    <td style="min-width: 90mm; text-align: center;">
+                    <td style="min-width: 80mm; text-align: center;">
                         Ditetapkan di Serang<br/>
                         Pada Tanggal {{ $recommend_permission_date }}<br/>
                         {{ $recommend_permission_position }}<br/>
+                        <br/>
+                        <br/>
+                        <span>X</span>
                         <br/>
                         <br/>
                         <br/>
